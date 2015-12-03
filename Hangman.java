@@ -30,7 +30,7 @@ public class Hangman {
 			}
 			
 			int i;
-			for(i=0; i<6 && wordList.size() > 1; i++) {
+			for(i=0; i<10 && wordList.size() > 1; i++) {
 				table = new SuperTable(wordList, wordlength, letterSet);
 				System.out.println("My guess is: "+table.getFreq());
 				System.out.print("How many times is the letter in the word? ");

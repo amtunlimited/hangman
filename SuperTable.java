@@ -28,7 +28,12 @@ public class SuperTable {
 		for(String word : wordList) {
 			HashMap<Character, Boolean> letterfound = new HashMap<Character, Boolean>();
 			for(i=0; i<wordlength; i++) {
-				Character curr = new Character(word.charAt(i));
+				Character curr = null;
+				try {
+					curr = new Character(word.charAt(i));
+				} catch(StringIndexOutOfBoundsException e) {
+					System.out.println("The word is: " + word);
+				}
 				//If this is the first instance, initalize
 				if(letterfreq.get(curr) == null) 
 					letterfreq.put(curr, new Integer(0));
